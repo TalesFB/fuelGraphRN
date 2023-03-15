@@ -17,12 +17,11 @@ import {
   CardValue,
 } from "./styles";
 
-export function VerticalCard({item}: any) {
-
-  const typeLabel:any = {
-  "Gasolina": <TitleBlue>{item.type}</TitleBlue>,
-  "Álcool": <TitleGreen>{item.type}</TitleGreen>,
-}
+export function VerticalCard({ item }: any) {
+  const typeLabel: any = {
+    Gasolina: <TitleBlue>{item.type}</TitleBlue>,
+    Álcool: <TitleGreen>{item.type}</TitleGreen>,
+  };
 
   return (
     <Container>
@@ -34,7 +33,7 @@ export function VerticalCard({item}: any) {
         <CardDescription>
           <InfoConsumer>
             <InfoTitle>
-             Quant. litros:<QuantityTitle>{item.amountLiters}</QuantityTitle>
+              Quant. litros:<QuantityTitle>{item.amountLiters}</QuantityTitle>
             </InfoTitle>
           </InfoConsumer>
           <InfoCost>
@@ -43,7 +42,9 @@ export function VerticalCard({item}: any) {
             </InfoTitle>
           </InfoCost>
         </CardDescription>
-        <CardValue>VALOR TOTAL: <ValueTitle>R$ {item.totalValue}</ValueTitle></CardValue>
+        <CardValue>
+          VALOR TOTAL: <ValueTitle>R$ {item.totalValue}</ValueTitle>
+        </CardValue>
       </CardInfo>
     </Container>
   );

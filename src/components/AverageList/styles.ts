@@ -7,7 +7,7 @@ export const LabelText = styled.Text`
   font-size: ${RFValue(13)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
   color: ${({ theme }) => theme.colors.grayText};
-  margin-left: ${RFValue(12)}px;
+  margin-left: ${RFValue(3)}px;
   margin-bottom: ${RFValue(5)}px;
 `;
 export const Container = styled.View`

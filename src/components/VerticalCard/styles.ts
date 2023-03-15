@@ -42,17 +42,17 @@ export const Container = styled.View`
   flex-direction: row;
   background-color: ${({ theme }) => theme.colors.cardBackground};
   width: ${RFValue(324)};
-  height: ${RFValue(70)};
+  height: ${RFValue(65)};
   margin: 0 ${RFValue(10)}px;
   border-radius: 5%;
-  margin-bottom: ${RFValue(15)}px;
+  margin-bottom: ${RFValue(10)}px;
 `;
 
 export const CardTipe = styled.View`
   background-color: ${({ theme }) => theme.colors.cardBackground};
   align-items: center;
   justify-content: center;
-  height: ${RFValue(70)}px;
+  height: ${RFValue(65)}px;
   width: ${RFValue(85)}px;
   padding: 0 ${RFValue(8)}px;
 `;

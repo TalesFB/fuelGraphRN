@@ -15,7 +15,8 @@ import { Loading } from "./src/components/Loading";
 import theme from "./src/global/styles/theme";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Feather, AntDesign, Octicons  } from '@expo/vector-icons';
+import { Feather, AntDesign, Octicons } from "@expo/vector-icons";
+import { View, Text } from "react-native";
 
 export default function App() {
   const Tab = createBottomTabNavigator();
@@ -64,25 +65,70 @@ export default function App() {
           tabBarShowLabel: false,
           tabBarStyle: {
             backgroundColor: `${theme.colors.tabBackground}`,
-            height:90,
-            borderTopColor:`${theme.colors.tabBackground}`,
+            height: 80,
+            paddingBottom: 20,
+            borderTopColor: `${theme.colors.tabBackground}`,
           },
         }}
       >
         <Tab.Screen
           name="Lista"
           component={HomeScreen}
-          options={{ tabBarIcon: ({ focused }) => <Feather  name="list" size={24} color="white" /> }}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <>
+                <Feather
+                  name="list"
+                  size={25}
+                  color={`${focused ? "white" : theme.colors.grayTextPlacehoder}`}
+                />
+                <Text
+                  style={{
+                    color: `${focused ? "white" : theme.colors.grayTextPlacehoder}`,
+                    fontSize: 10,
+                  }}
+                >
+                  Lista
+                </Text>
+              </>
+            ),
+          }}
         />
         <Tab.Screen
           name="Adicionar"
           component={AddScreen}
-          options={{ tabBarIcon: ({ focused }) => <AntDesign name="pluscircle" size={44} color="white" />}}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <AntDesign
+                name="pluscircle"
+                size={50}
+                color={`${focused ? "white" : theme.colors.grayTextPlacehoder}`}
+              />
+            ),
+          }}
         />
         <Tab.Screen
           name="Resumo"
           component={ResumeScreen}
-          options={{ tabBarIcon: ({ focused }) => <Octicons name="graph" size={24} color="white" /> }}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <>
+                <Octicons
+                  name="graph"
+                  size={20}
+                  color={`${focused ? "white" : theme.colors.grayTextPlacehoder}`}
+                />
+                <Text
+                  style={{
+                    color: `${focused ? "white" : theme.colors.grayTextPlacehoder}`,
+                    fontSize: 10,
+                  }}
+                >
+                  Resumo
+                </Text>
+              </>
+            ),
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>

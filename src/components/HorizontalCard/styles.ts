@@ -36,7 +36,7 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.cardBackground};
   width: ${RFValue(250)};
   height: ${RFValue(140)};
-  margin: 0 ${RFValue(10)}px;
+  margin: 0 ${RFValue(10)}px 0 0;
   border-radius: 5%;
   margin-bottom: ${RFValue(15)}px;
 `;
