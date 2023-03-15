@@ -9,7 +9,7 @@ export function AverageList(list: any) {
     <Container
     >
       <LabelText>Médias</LabelText>
-      <ScrollView horizontal>
+      <ScrollView horizontal indicatorStyle="white">
         {/* {list?.map((item: any) => (
           <HorizontalCard item={item} />
         ))} */}
