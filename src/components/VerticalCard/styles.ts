@@ -52,7 +52,8 @@ export const CardTipe = styled.View`
   background-color: ${({ theme }) => theme.colors.cardBackground};
   align-items: center;
   justify-content: center;
-  height: ${RFValue(70)};
+  height: ${RFValue(70)}px;
+  width: ${RFValue(85)}px;
   padding: 0 ${RFValue(8)}px;
 `;
 
