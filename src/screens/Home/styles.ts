@@ -17,7 +17,7 @@ export const Title = styled.Text`
 
 export const Header = styled.View`
   width: 100%;
-  height: ${RFPercentage(20)}px;
+  height: ${RFPercentage(18)}px;
   /* align-items: center; */
   /* justify-content: center; */
 `;
@@ -26,7 +26,7 @@ export const UserWrapper = styled.View`
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
-  margin-top: ${getStatusBarHeight() + RFValue(10)}px;
+  margin-top: ${getStatusBarHeight() + RFValue(15)}px;
 `;
 export const CarInfo = styled.View`
   flex-direction: row;

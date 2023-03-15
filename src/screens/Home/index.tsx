@@ -1,4 +1,6 @@
 import { Image } from "react-native";
+import { AverageList } from "../../components/AverageList";
+import { SupplyList } from "../../components/SupplyList";
 import {
   Container,
   Header,
@@ -34,6 +36,8 @@ export function Home() {
           </LogoutButton>
         </UserWrapper>
       </Header>
+      <AverageList/>
+      <SupplyList/>
     </Container>
   );
 }
