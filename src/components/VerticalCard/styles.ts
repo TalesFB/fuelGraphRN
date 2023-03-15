@@ -18,7 +18,7 @@ export const DateTitle = styled.Text`
 export const InfoTitle = styled.Text`
   font-size: ${RFValue(12)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
-  color: ${({ theme }) => theme.colors.whiteText};
+  color: ${({ theme }) => theme.colors.grayText};
 `;
 
 export const ValueTitle = styled.Text`
@@ -55,8 +55,8 @@ export const CardDescription = styled.View`
 
 export const CardValue = styled.Text`
   font-size: ${RFValue(14)}px;
-  font-family: ${({ theme }) => theme.fonts.bold};
-  color: ${({ theme }) => theme.colors.whiteText};
+  font-family: ${({ theme }) => theme.fonts.semi_bold};
+  color: ${({ theme }) => theme.colors.grayText};
   padding: ${RFValue(5)}px 0 0 0;
 `;
 

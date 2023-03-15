@@ -11,10 +11,10 @@ export function HorizontalCard(item: any) {
       </CardTipe>
       <CardInfo>
         <InfoConsumer>
-          <InfoTitle>Consumo médio:  R$ <ValueTitle>18,00</ValueTitle></InfoTitle>
+          <InfoTitle>Consumo médio: <ValueTitle>R$  18,00</ValueTitle></InfoTitle>
         </InfoConsumer>
         <InfoCost>
-          <InfoTitle>Custo médio/L:  R$ <ValueTitle>18,00</ValueTitle></InfoTitle>
+          <InfoTitle>Custo médio/L:  <ValueTitle>R$ 18,00</ValueTitle></InfoTitle>
         </InfoCost>
       </CardInfo>
     </Container>

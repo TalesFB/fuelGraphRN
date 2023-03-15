@@ -31,11 +31,11 @@ export function VerticalCard(item: any) {
           </InfoConsumer>
           <InfoCost>
             <InfoTitle>
-              preço/L: R$ <ValueTitle>18,00</ValueTitle>
+              preço/L: <ValueTitle>R$ 18,00</ValueTitle>
             </InfoTitle>
           </InfoCost>
         </CardDescription>
-        <CardValue>VALOR TOTAL: R$ <ValueTitle>18,00</ValueTitle></CardValue>
+        <CardValue>VALOR TOTAL: <ValueTitle>R$ 18,00</ValueTitle></CardValue>
       </CardInfo>
     </Container>
   );

@@ -12,12 +12,12 @@ export const Title = styled.Text`
 export const InfoTitle = styled.Text`
   font-size: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
-  color: ${({ theme }) => theme.colors.whiteText};
+  color: ${({ theme }) => theme.colors.grayText};
 `;
 
 export const ValueTitle = styled.Text`
-  font-size: ${RFValue(19)}px;
-  font-family: ${({ theme }) => theme.fonts.bold};
+  font-size: ${RFValue(16)}px;
+  font-family: ${({ theme }) => theme.fonts.semi_bold};
   color: ${({ theme }) => theme.colors.whiteText};
 `;
 
