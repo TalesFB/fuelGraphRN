@@ -8,12 +8,14 @@ import {
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 import { Home } from "./src/screens/Home";
+import { Register } from "./src/screens/Register";
+import { Resume } from "./src/screens/Resume";
 import { Loading } from "./src/components/Loading";
 
 import theme from "./src/global/styles/theme";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {Ionicons} from '@expo/vector-icons';
+import { Feather, AntDesign, Octicons  } from '@expo/vector-icons';
 
 export default function App() {
   const Tab = createBottomTabNavigator();
@@ -38,7 +40,7 @@ export default function App() {
     return (
       <ThemeProvider theme={theme}>
         <StatusBar style="light" />
-        <Home />
+        <Register />
       </ThemeProvider>
     );
   }
@@ -47,7 +49,7 @@ export default function App() {
     return (
       <ThemeProvider theme={theme}>
         <StatusBar style="light" />
-        <Home />
+        <Resume />
       </ThemeProvider>
     );
   }
@@ -56,10 +58,32 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen name="Lista" component={HomeScreen} />
-        <Tab.Screen name="Adicionar" component={AddScreen} />
-        <Tab.Screen name="Resumo" component={ResumeScreen} />
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+          tabBarShowLabel: false,
+          tabBarStyle: {
+            backgroundColor: `${theme.colors.tabBackground}`,
+            height:90,
+            borderTopColor:`${theme.colors.tabBackground}`,
+          },
+        }}
+      >
+        <Tab.Screen
+          name="Lista"
+          component={HomeScreen}
+          options={{ tabBarIcon: ({ focused }) => <Feather  name="list" size={24} color="white" /> }}
+        />
+        <Tab.Screen
+          name="Adicionar"
+          component={AddScreen}
+          options={{ tabBarIcon: ({ focused }) => <AntDesign name="pluscircle" size={44} color="white" />}}
+        />
+        <Tab.Screen
+          name="Resumo"
+          component={ResumeScreen}
+          options={{ tabBarIcon: ({ focused }) => <Octicons name="graph" size={24} color="white" /> }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -1,18 +1,8 @@
-import { Image } from "react-native";
 import { AverageList } from "../../components/AverageList";
 import { SupplyList } from "../../components/SupplyList";
+import { Header } from "../../components/Header";
 import {
   Container,
-  Header,
-  UserWrapper,
-  CarInfo,
-  FuelImage,
-  HeaderTextWrapper,
-  Greeting,
-  CarPlate,
-  LogoutButton,
-  LogoutIcon,
-  Title,
 } from "./styles";
 
 const mediumConsumptionData = [
@@ -155,24 +145,7 @@ const supplyListData = [
 export function Home() {
   return (
     <Container>
-      <Header>
-        <UserWrapper>
-          <CarInfo>
-            <FuelImage>
-              <Image source={require("../../../assets/logoSmall.png")} />
-            </FuelImage>
-            <HeaderTextWrapper>
-              <Greeting>Olá, Bom dia</Greeting>
-              <CarPlate>Veículo:</CarPlate>
-            </HeaderTextWrapper>
-          </CarInfo>
-          <LogoutButton>
-            <LogoutIcon name="logout">
-            </LogoutIcon>
-            <Title>Sair</Title>
-          </LogoutButton>
-        </UserWrapper>
-      </Header>
+      <Header/>
       <AverageList list={mediumConsumptionData}/>
       <SupplyList list={supplyListData}/>
     </Container>
