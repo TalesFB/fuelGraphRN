@@ -4,11 +4,11 @@ import { AntDesign } from "@expo/vector-icons";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 export const LabelText = styled.Text`
-  font-size: ${RFValue(16)}px;
+  font-size: ${RFValue(13)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
   color: ${({ theme }) => theme.colors.grayText};
   margin-left: ${RFValue(12)}px;
-  margin-bottom: ${RFValue(10)}px;
+  margin-bottom: ${RFValue(5)}px;
 `;
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.background};
@@ -18,5 +18,5 @@ export const Container = styled.View`
 export const Divider = styled.View`
   border-bottom-color: white;
   border-bottom-width: 1px;
-  margin: ${RFValue(20)}px ${RFValue(15)}px;
+  margin: ${RFValue(15)}px ${RFValue(15)}px;
 `;

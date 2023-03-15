@@ -4,7 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 export const LabelText = styled.Text`
-  font-size: ${RFValue(16)}px;
+  font-size: ${RFValue(13)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
   color: ${({ theme }) => theme.colors.grayText};
   margin-left: ${RFValue(12)}px;

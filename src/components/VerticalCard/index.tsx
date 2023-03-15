@@ -7,35 +7,43 @@ import {
   CardInfo,
   InfoConsumer,
   InfoCost,
-  TypeTitle,
+  TitleBlue,
+  TitleGreen,
   DateTitle,
   CardDescription,
   InfoTitle,
   ValueTitle,
+  QuantityTitle,
   CardValue,
 } from "./styles";
 
-export function VerticalCard(item: any) {
+export function VerticalCard({item}: any) {
+
+  const typeLabel:any = {
+  "Gasolina": <TitleBlue>{item.type}</TitleBlue>,
+  "Álcool": <TitleGreen>{item.type}</TitleGreen>,
+}
+
   return (
     <Container>
       <CardTipe>
-        <TypeTitle>Gasolina</TypeTitle>
-        <DateTitle>00/00/0000</DateTitle>
+        {typeLabel[item.type]}
+        <DateTitle>{item.date}</DateTitle>
       </CardTipe>
       <CardInfo>
         <CardDescription>
           <InfoConsumer>
             <InfoTitle>
-             Quant. litros:<ValueTitle>12</ValueTitle>
+             Quant. litros:<QuantityTitle>{item.amountLiters}</QuantityTitle>
             </InfoTitle>
           </InfoConsumer>
           <InfoCost>
             <InfoTitle>
-              preço/L: <ValueTitle>R$ 18,00</ValueTitle>
+              preço/L: <ValueTitle>R$ {item.priceLiters}</ValueTitle>
             </InfoTitle>
           </InfoCost>
         </CardDescription>
-        <CardValue>VALOR TOTAL: <ValueTitle>R$ 18,00</ValueTitle></CardValue>
+        <CardValue>VALOR TOTAL: <ValueTitle>R$ {item.totalValue}</ValueTitle></CardValue>
       </CardInfo>
     </Container>
   );

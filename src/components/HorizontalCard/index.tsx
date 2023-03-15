@@ -1,20 +1,24 @@
-import { ScrollView, View } from "react-native";
-import theme from "../../global/styles/theme";
+import { Container, CardTipe, CardInfo, InfoConsumer, InfoCost, TitleBlue, TitleGreen, TitleWhite, InfoTitle, ValueTitle } from "./styles";
 
-import { Container, CardTipe, CardInfo, InfoConsumer, InfoCost, Title, InfoTitle, ValueTitle } from "./styles";
+export function HorizontalCard({item}: any) {
 
-export function HorizontalCard(item: any) {
+  const typeLabel:any = {
+  "Gasolina": <TitleBlue>{item.type}</TitleBlue>,
+  "Álcool": <TitleGreen>{item.type}</TitleGreen>,
+  "Média Geral": <TitleWhite>{item.type}</TitleWhite>,
+}
+
   return (
     <Container>
       <CardTipe>
-        <Title>Gasolina</Title>
+        {typeLabel[item.type]}
       </CardTipe>
       <CardInfo>
         <InfoConsumer>
-          <InfoTitle>Consumo médio: <ValueTitle>R$  18,00</ValueTitle></InfoTitle>
+          <InfoTitle>Consumo médio: <ValueTitle>{item.averageConsumption} Km/L</ValueTitle></InfoTitle>
         </InfoConsumer>
         <InfoCost>
-          <InfoTitle>Custo médio/L:  <ValueTitle>R$ 18,00</ValueTitle></InfoTitle>
+          <InfoTitle>Custo médio/L:  <ValueTitle>R$ {item.custoMedium}/Km</ValueTitle></InfoTitle>
         </InfoCost>
       </CardInfo>
     </Container>

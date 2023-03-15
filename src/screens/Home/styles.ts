@@ -17,7 +17,7 @@ export const Title = styled.Text`
 
 export const Header = styled.View`
   width: 100%;
-  height: ${RFPercentage(18)}px;
+  height: ${RFPercentage(16)}px;
   /* align-items: center; */
   /* justify-content: center; */
 `;

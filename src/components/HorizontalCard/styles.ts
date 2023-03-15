@@ -3,10 +3,20 @@ import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import { AntDesign } from "@expo/vector-icons";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
-export const Title = styled.Text`
+export const TitleBlue = styled.Text`
   font-size: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
   color: ${({ theme }) => theme.colors.blue};
+`;
+export const TitleGreen = styled.Text`
+  font-size: ${RFValue(15)}px;
+  font-family: ${({ theme }) => theme.fonts.medium};
+  color: ${({ theme }) => theme.colors.primary};
+`;
+export const TitleWhite = styled.Text`
+  font-size: ${RFValue(15)}px;
+  font-family: ${({ theme }) => theme.fonts.medium};
+  color: ${({ theme }) => theme.colors.whiteText};
 `;
 
 export const InfoTitle = styled.Text`
@@ -16,9 +26,9 @@ export const InfoTitle = styled.Text`
 `;
 
 export const ValueTitle = styled.Text`
-  font-size: ${RFValue(16)}px;
+  font-size: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.fonts.semi_bold};
-  color: ${({ theme }) => theme.colors.whiteText};
+  color: ${({ theme }) => theme.colors.red};
 `;
 
 export const Container = styled.View`
@@ -48,4 +58,5 @@ export const InfoConsumer = styled.Text`
 
 export const InfoCost = styled.Text`
   flex-direction: row;
+  margin-top: ${RFValue(5)}px;
 `;
