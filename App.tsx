@@ -64,7 +64,7 @@ export default function App() {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
-            backgroundColor: `${theme.colors.tabBackground}`,
+            backgroundColor: `${theme.colors.background}`,
             height: 80,
             paddingBottom: 20,
             borderTopColor: `${theme.colors.tabBackground}`,
@@ -113,10 +113,11 @@ export default function App() {
           options={{
             tabBarIcon: ({ focused }) => (
               <>
-                <Octicons
-                  name="graph"
-                  size={20}
+                <AntDesign
+                  name="piechart"
+                  size={24}
                   color={`${focused ? "white" : theme.colors.grayTextPlacehoder}`}
+                  style={{ padding: 5 }}
                 />
                 <Text
                   style={{

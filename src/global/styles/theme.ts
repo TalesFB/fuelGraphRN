@@ -2,7 +2,7 @@ export default {
   colors: {
     primary: "#00AF1C",
     secundary: "#3D3D3D",
-    background: "#111111",
+    background: "#050505",
     tabBackground: "#1F1F1F",
     red: "#FF496A",
     blue: "#2B97E6",
