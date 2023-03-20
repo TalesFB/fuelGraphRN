@@ -15,7 +15,7 @@ import { Loading } from "./src/components/Loading";
 import theme from "./src/global/styles/theme";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Feather, AntDesign, Octicons } from "@expo/vector-icons";
+import { Feather, AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
 import { View, Text } from "react-native";
 
 export default function App() {
@@ -113,11 +113,10 @@ export default function App() {
           options={{
             tabBarIcon: ({ focused }) => (
               <>
-                <AntDesign
-                  name="piechart"
-                  size={24}
+                <MaterialCommunityIcons
+                  name="chart-arc"
+                  size={30}
                   color={`${focused ? "white" : theme.colors.grayTextPlacehoder}`}
-                  style={{ padding: 5 }}
                 />
                 <Text
                   style={{
