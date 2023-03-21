@@ -28,7 +28,7 @@ export const InfoTitle = styled.Text`
 export const ValueTitle = styled.Text`
   font-size: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.fonts.semi_bold};
-  color: ${({ theme }) => theme.colors.red};
+  color: ${({ theme }) => theme.colors.whiteText};
 `;
 
 export const Container = styled.View`

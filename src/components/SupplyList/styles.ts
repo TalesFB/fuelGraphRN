@@ -13,4 +13,5 @@ export const LabelText = styled.Text`
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.background};
   margin-left: ${RFValue(3)}px;
+  height: ${RFPercentage(55)}px;
 `;
