@@ -15,6 +15,7 @@ interface SupplyListProps {
 }
 
 export function SupplyList({ list }: SupplyListProps) {
+  // console.log(list);
   return (
     <>
       <Container>

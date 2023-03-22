@@ -8,7 +8,7 @@ import {
 
 import { Loading } from "./src/components/Loading";
 import { NavigateComponent } from "./src/components/NavigateComponent";
-import { AuthCarProvider } from "./src/context/AuthCarContext";
+import { AuthvehicleProvider } from "./src/context/AuthVehicleContext";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -21,8 +21,8 @@ export default function App() {
   if (!fontsLoaded) return <Loading />;
 
   return (
-    <AuthCarProvider>
+    <AuthvehicleProvider>
       <NavigateComponent />
-    </AuthCarProvider>
+    </AuthvehicleProvider>
   );
 }

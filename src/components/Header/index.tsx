@@ -12,10 +12,10 @@ import {
   LogoutIcon,
   Title,
 } from "./styles";
-import { AuthCarContext } from "../../context/AuthCarContext";
+import { AuthvehicleContext } from "../../context/AuthVehicleContext";
 
 export function Header() {
-  const { plateCar, setPlateCar }: any = useContext(AuthCarContext);
+  const { plateCar, setPlateCar }: any = useContext(AuthvehicleContext);
   return (
     <HeaderContainer>
       <UserWrapper>

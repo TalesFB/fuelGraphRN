@@ -38,7 +38,7 @@ export function VerticalCard({ item }: any) {
           </InfoConsumer>
           <InfoCost>
             <InfoTitle>
-              preço/L: <ValueTitle>R$ {item.priceLiters}</ValueTitle>
+              preço/L: <ValueTitle>R$ {item.litersValue}</ValueTitle>
             </InfoTitle>
           </InfoCost>
         </CardDescription>

@@ -13,10 +13,10 @@ import { Login } from "../../screens/Login";
 
 import theme from "../../global/styles/theme";
 
-import { AuthCarContext } from "../../context/AuthCarContext";
+import { AuthvehicleContext } from "../../context/AuthVehicleContext";
 
 export function NavigateComponent() {
-  const { plateCar, setPlateCar }: any = useContext(AuthCarContext);
+  const { plateCar, setPlateCar }: any = useContext(AuthvehicleContext);
 
   const Tab = createBottomTabNavigator();
 
