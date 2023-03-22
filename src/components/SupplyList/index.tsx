@@ -1,4 +1,4 @@
-import { FlatList, ScrollView } from "react-native";
+import { FlatList } from "react-native";
 import { VerticalCard } from "../VerticalCard";
 import { Container, LabelText } from "./styles";
 

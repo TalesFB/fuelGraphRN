@@ -39,7 +39,7 @@ export const CarPlate = styled.Text`
   font-size: 14px;
 `;
 
-export const LogoutButton = styled.View`
+export const LogoutButton = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
 `;
