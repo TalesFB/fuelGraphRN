@@ -18,7 +18,7 @@ export function AverageList({ list }: AverageListProps) {
     <>
       <Container>
         <LabelText>Médias</LabelText>
-        <ScrollView horizontal indicatorStyle="white">
+        <ScrollView horizontal>
           {list.map((item: ItemList) => (
             <HorizontalCard key={item.id} item={item} />
           ))}

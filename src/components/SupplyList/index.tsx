@@ -2,20 +2,28 @@ import { FlatList, ScrollView } from "react-native";
 import { VerticalCard } from "../VerticalCard";
 import { Container, LabelText } from "./styles";
 
-export function SupplyList({ list }: any) {
+interface ItemList {
+  id: number;
+  type: string;
+  date: string;
+  amountLiters: number;
+  priceLiters: number;
+  totalValue: number;
+}
+interface SupplyListProps {
+  list: ItemList[];
+}
+
+export function SupplyList({ list }: SupplyListProps) {
   return (
     <>
       <Container>
         <LabelText>Listagem de abastecimentos</LabelText>
-        {/* <ScrollView indicatorStyle="white">
-          {list?.map((item: any) => (
-            <VerticalCard key={item.id} item={item} />
-          ))}
-        </ScrollView> */}
         <FlatList
+          indicatorStyle="white"
           data={list}
-          renderItem={({ item }: any) => <VerticalCard item={item} />}
-          keyExtractor={({ index }) => index}
+          renderItem={({ item }) => <VerticalCard item={item} />}
+          keyExtractor={({ id }) => String(id)}
         />
       </Container>
     </>
