@@ -5,7 +5,7 @@ import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 export const HeaderContainer = styled.View`
   width: 100%;
-  height: ${RFPercentage(16)}px;
+  height: ${RFPercentage(15)}px;
   /* align-items: center; */
   /* justify-content: center; */
 `;
@@ -20,22 +20,26 @@ export const CarInfo = styled.View`
   flex-direction: row;
   align-items: center;
 `;
-export const FuelImage = styled.View``;
 
 export const HeaderTextWrapper = styled.View`
-  margin-left: ${RFValue(9)}px;
+  margin-left: ${RFValue(5)}px;
 `;
 
 export const Greeting = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.medium};
-  color: ${({ theme }) => theme.colors.grayText};
+  font-family: ${({ theme }) => theme.fonts.semi_bold};
+  color: ${({ theme }) => theme.colors.whiteText};
   font-size: 15px;
   line-height: 22px;
 `;
 
 export const CarPlate = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.semi_bold};
+  font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.grayText};
+  font-size: 14px;
+`;
+export const Plate = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.semi_bold};
+  color: ${({ theme }) => theme.colors.whiteText};
   font-size: 14px;
 `;
 

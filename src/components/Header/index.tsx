@@ -4,10 +4,10 @@ import {
   HeaderContainer,
   UserWrapper,
   CarInfo,
-  FuelImage,
   HeaderTextWrapper,
   Greeting,
   CarPlate,
+  Plate,
   LogoutButton,
   LogoutIcon,
   Title,
@@ -16,16 +16,23 @@ import { AuthvehicleContext } from "../../context/AuthVehicleContext";
 
 export function Header() {
   const { plateCar, setPlateCar }: any = useContext(AuthvehicleContext);
+
+  function getTimeMessage() {
+    let hours = new Date().getHours();
+    if (hours <= 5) return "Boa madrugada";
+    if (hours < 12) return "Bom dia";
+    if (hours < 18) return "Boa tarde";
+    return "Boa noite";
+  }
   return (
     <HeaderContainer>
       <UserWrapper>
         <CarInfo>
-          <FuelImage>
-            <Image source={require("../../../assets/logoSmall.png")} />
-          </FuelImage>
           <HeaderTextWrapper>
-            <Greeting>Olá, Bom dia</Greeting>
-            <CarPlate>Veículo:{plateCar}</CarPlate>
+            <Greeting>Olá, {getTimeMessage()}</Greeting>
+            <CarPlate>
+              Veículo: <Plate>{plateCar}</Plate>
+            </CarPlate>
           </HeaderTextWrapper>
         </CarInfo>
         <LogoutButton onPress={() => setPlateCar(null)}>

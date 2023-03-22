@@ -15,3 +15,16 @@ export const Container = styled.View`
   margin-left: ${RFValue(3)}px;
   height: ${RFPercentage(55)}px;
 `;
+export const EmptyContent = styled.View`
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.2;
+`;
+
+export const EmptyText = styled.Text`
+  font-size: ${RFValue(8)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: ${({ theme }) => theme.colors.grayText};
+`;
