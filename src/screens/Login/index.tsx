@@ -39,7 +39,7 @@ export function Login({ handlePlate }: any) {
               placeholderTextColor={"#7E7E7E"}
               onChangeText={(text) => setPlate(text)}
             />
-            <Button onPress={() => handlePlate(plate)}>
+            <Button onPress={() => handlePlate(plate.toUpperCase())}>
               <TextButton>Entrar</TextButton>
             </Button>
           </KeyboardAvoidingView>
