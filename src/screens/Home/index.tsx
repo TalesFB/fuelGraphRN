@@ -2,7 +2,6 @@ import { AverageList } from "../../components/AverageList";
 import { SupplyList } from "../../components/SupplyList";
 import { Header } from "../../components/Header";
 import { Container } from "./styles";
-import { View, Text } from "react-native";
 
 const mediumConsumptionData = [
   {
