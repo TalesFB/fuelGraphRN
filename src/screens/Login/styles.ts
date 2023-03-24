@@ -24,7 +24,7 @@ export const TextLogin = styled.Text`
   font-weight: 600;
   color: #b6b6b6;
   padding-bottom: 40;
-  padding-top: 10;
+  padding-top: 15;
 `;
 
 export const LabelInput = styled.Text`
@@ -48,7 +48,7 @@ export const Button = styled.TouchableOpacity`
   height: 50;
   border-width: 0;
   border-radius: 4;
-  background-color: #00af1c;
+  background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@ export const Button = styled.TouchableOpacity`
 export const TextButton = styled.Text`
   font-family: ${({ theme }) => theme.fonts.medium};
   color: #fafafa;
-  font-size: 18;
+  font-size: 15;
 `;
 
 export const FooterLogin = styled.View`

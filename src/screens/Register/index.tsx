@@ -16,9 +16,23 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import theme from "../../global/styles/theme";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+const schema = yup.object({
+  amountLiters: yup.number().positive().required("Informe a quantidade de litros abastecidos"),
+  litersValue: yup.number().positive().required("Informe o valor por litro de combustível"),
+}).required();
+
+type FormData = {
+  amountLiters:string;
+  litersValue:string;
+}
 
 export function Register() {
-  const { control, handleSubmit } = useForm();
+  const { control, handleSubmit, formState:{errors} } = useForm<FormData>({
+    resolver: yupResolver(schema)
+  });
   const [type, setType] = useState("Gasolina");
 
   function handleRegister(data: any) {
@@ -41,7 +55,7 @@ export function Register() {
                   label="Gasolina"
                   value="Gasolina"
                   labelStyle={{ color: "white" }}
-                  color={`${theme.colors.blue}`}
+                  color={`${theme.colors.red}`}
                   style={{ marginRight: 50 }}
                 />
                 <RadioButton.Item
@@ -61,6 +75,7 @@ export function Register() {
               name="amountLiters"
               control={control}
               placeholder="Insira a quantidade de litros"
+              error={errors.amountLiters}
             />
           </ContainerInput>
           <ContainerInput>
@@ -69,6 +84,7 @@ export function Register() {
               name="litersValue"
               control={control}
               placeholder="Insira o valor pago por litro"
+              error={errors.litersValue}
             />
           </ContainerInput>
           <Button onPress={handleSubmit(handleRegister)}>

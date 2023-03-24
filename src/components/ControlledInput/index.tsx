@@ -1,14 +1,17 @@
 import React from "react";
-import { Control, Controller } from "react-hook-form";
+import { Control, Controller, FieldError} from "react-hook-form";
 import { Input, InputProps } from "../Input";
+import {Error} from "./styles"
 
 type Props = InputProps & {
   control: Control<any>;
   name: string;
+  error?:FieldError;
 };
 
-export function ControlledInput({ control, label, name, ...rest }: Props) {
+export function ControlledInput({ control, label, name, error, ...rest }: Props) {
   return (
+    <>
     <Controller
       name={name}
       control={control}
@@ -16,5 +19,8 @@ export function ControlledInput({ control, label, name, ...rest }: Props) {
         <Input label={label} onChangeText={onChange} value={value} {...rest} />
       )}
     />
+    {
+        error && <Error>{error?.message}</Error>
+    }</>
   );
 }

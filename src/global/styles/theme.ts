@@ -1,6 +1,6 @@
 export default {
   colors: {
-    primary: "#00AF1C",
+    primary: "#00BB98",
     secundary: "#3D3D3D",
     background: "#050505",
     tabBackground: "#1F1F1F",

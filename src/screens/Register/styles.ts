@@ -45,7 +45,7 @@ export const Button = styled.TouchableOpacity`
   height: 50;
   border-width: 0;
   border-radius: 4;
-  background-color: #00af1c;
+  background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
