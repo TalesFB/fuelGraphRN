@@ -48,13 +48,13 @@ export const LogoutButton = styled.TouchableOpacity`
   align-items: center;
 `;
 export const LogoutIcon = styled(AntDesign)`
-  color: ${({ theme }) => theme.colors.grayText};
+  color: ${({ theme }) => theme.colors.whiteText};
   font-size: 18px;
 `;
 
 export const Title = styled.Text`
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.grayText};
+  color: ${({ theme }) => theme.colors.whiteText};
   font-family: ${({ theme }) => theme.fonts.medium};
   margin-left: ${RFValue(4)}px;
 `;
