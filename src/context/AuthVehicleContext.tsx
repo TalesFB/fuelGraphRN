@@ -26,7 +26,7 @@ export function AuthvehicleProvider({ children }: any) {
     console.log(data);
   }
 
-  async function handleNewData() {
+  async function handleNewData(newData:any) {
     const response = await getItem();
     const previData = response ? JSON.parse(response) : [];
     const alreadyExists = previData.filter((item: any) => item.id === plateCar);
@@ -34,15 +34,7 @@ export function AuthvehicleProvider({ children }: any) {
     if (alreadyExists.length) {
       const dataFilter = previData.filter((item: any) => item.id !== plateCar);
       console.log("EXISTE", alreadyExists);
-      const newData = {
-        id: 1,
-        type: "Álcool",
-        date: "22-03-2023",
-        amountLiters: 10,
-        litersValue: 3,
-        totalValue: 30,
-      };
-
+    
       const newSupplies = {
         id: alreadyExists[0].id,
         supplies: [newData, ...alreadyExists[0].supplies],
@@ -52,21 +44,14 @@ export function AuthvehicleProvider({ children }: any) {
       await setItem(JSON.stringify(data));
     } else {
       console.log("NÃO EXISTE");
-      const newData = {
+      const newVeicle = {
         id: plateCar,
         supplies: [
-          {
-            id: 0,
-            type: "Gasolina",
-            date: "22-03-2023",
-            amountLiters: 8,
-            litersValue: 4,
-            totalValue: 32,
-          },
+          newData,
         ],
       };
 
-      const data = [...previData, newData];
+      const data = [...previData, newVeicle];
       await setItem(JSON.stringify(data));
     }
     hanfleFetchData();

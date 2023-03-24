@@ -13,11 +13,13 @@ import {
 import { RadioButton } from "react-native-paper";
 import { ControlledInput } from "../../components/ControlledInput";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthvehicleContext } from "../../context/AuthVehicleContext";
 import theme from "../../global/styles/theme";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import uuid from 'react-native-uuid';
 
 const schema = yup.object({
   amountLiters: yup.number().positive().required("Informe a quantidade de litros abastecidos"),
@@ -30,6 +32,8 @@ type FormData = {
 }
 
 export function Register() {
+  const { handleNewData }: any = useContext(AuthvehicleContext);
+
   const { control, handleSubmit, formState:{errors} } = useForm<FormData>({
     resolver: yupResolver(schema)
   });
@@ -37,7 +41,9 @@ export function Register() {
 
   function handleRegister(data: any) {
     const date = new Date(Date.now()).toLocaleString().split(',')[0];
+    const id = uuid.v4();
     console.log({ type, date, totalValue:data.amountLiters*data.litersValue, ...data });
+    handleNewData({ id, type, date, totalValue:data.amountLiters*data.litersValue, ...data });
 
   }
   return (

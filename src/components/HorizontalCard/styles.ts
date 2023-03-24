@@ -6,7 +6,7 @@ import { getStatusBarHeight } from "react-native-iphone-x-helper";
 export const TitleBlue = styled.Text`
   font-size: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
-  color: ${({ theme }) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.red};
 `;
 export const TitleGreen = styled.Text`
   font-size: ${RFValue(15)}px;

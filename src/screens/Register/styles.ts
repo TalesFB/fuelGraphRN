@@ -49,7 +49,7 @@ export const Button = styled.TouchableOpacity`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 340;
+  width: 345;
   margin: 15px 20px;
   padding: 10px;
 `;

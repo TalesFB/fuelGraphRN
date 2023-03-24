@@ -28,6 +28,7 @@ export function Header() {
     <HeaderContainer>
       <UserWrapper>
         <CarInfo>
+          <Image source={require("../../../assets/logoSmall.png")} />
           <HeaderTextWrapper>
             <Greeting>Olá, {getTimeMessage()}</Greeting>
             <CarPlate>

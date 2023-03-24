@@ -22,7 +22,7 @@ export const CarInfo = styled.View`
 `;
 
 export const HeaderTextWrapper = styled.View`
-  margin-left: ${RFValue(5)}px;
+  margin-left: ${RFValue(10)}px;
 `;
 
 export const Greeting = styled.Text`
