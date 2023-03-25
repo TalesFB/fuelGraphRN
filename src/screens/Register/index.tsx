@@ -1,4 +1,11 @@
-import { Header } from "../../components/Header";
+import { useState, useContext } from "react";
+import { RadioButton } from "react-native-paper";
+import { useForm } from "react-hook-form";
+import { TouchableWithoutFeedback, Keyboard } from "react-native";
+import { yupResolver } from '@hookform/resolvers/yup';
+import uuid from 'react-native-uuid';
+import * as yup from "yup";
+
 import {
   Container,
   KeyboardAvoidingView,
@@ -10,16 +17,11 @@ import {
   Button,
   TextButton,
 } from "./styles";
-import { RadioButton } from "react-native-paper";
-import { ControlledInput } from "../../components/ControlledInput";
-import { useForm } from "react-hook-form";
-import { useState, useContext } from "react";
-import { AuthvehicleContext } from "../../context/AuthVehicleContext";
+
 import theme from "../../global/styles/theme";
-import { TouchableWithoutFeedback, Keyboard } from "react-native";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
-import uuid from 'react-native-uuid';
+import { Header } from "../../components/Header";
+import { ControlledInput } from "../../components/ControlledInput";
+import { AuthvehicleContext } from "../../context/AuthVehicleContext";
 
 const schema = yup.object({
   amountLiters: yup.number().positive().required("Informe a quantidade de litros abastecidos"),

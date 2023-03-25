@@ -37,7 +37,8 @@ export function Login({ handlePlate }: any) {
             <TextInput
               placeholder="Insira a placa do veículo"
               placeholderTextColor={"#7E7E7E"}
-              onChangeText={(text) => setPlate(text)}
+              onChangeText={(text) => setPlate(text.toUpperCase())}
+              
             />
             <Button onPress={() => handlePlate(plate.toUpperCase())}>
               <TextButton>Entrar</TextButton>
