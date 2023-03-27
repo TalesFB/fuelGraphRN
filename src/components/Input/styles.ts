@@ -1,4 +1,5 @@
 import { TextInput } from "react-native";
+import { RFValue } from "react-native-responsive-fontsize";
 import styled, { css } from "styled-components/native";
 
 interface Props {
@@ -10,36 +11,36 @@ export const Container = styled.View`
 `;
 
 export const IconContainer = styled.View<Props>`
-  height: 56px;
-  width: 55px;
+  height: ${RFValue(56)}px;
+  width: ${RFValue(55)}px;
   justify-content: center;
   align-items: center;
-  margin-right: 2px;
+  margin-right: ${RFValue(2)}px;
   background-color: #ffffff;
 
   ${({ isFocused }) =>
     isFocused &&
     css`
-      border-bottom-width: 2px;
+      border-bottom-width: ${RFValue(2)}px;
       border-bottom-color: #dc1637;
     `};
 `;
 
 export const LabelInput = styled.Text`
   color: #b6b6b6;
-  padding: 0 20px;
+  padding: 0 ${RFValue(20)}px;
 `;
 
 export const InputText = styled(TextInput)<Props>`
   color: white;
-  height: 50;
+  height: ${RFValue(50)}px;
   border-width: 0;
-  border-radius: 4;
+  /* border-radius: 4; */
   background-color: #3d3d3d;
   display: flex;
-  width: 345;
-  margin: 5px 20px;
-  padding: 10px;
+  width: ${RFValue(340)}px;
+  margin: ${RFValue(5)}px ${RFValue(20)}px;
+  padding: ${RFValue(10)}px;
 
   ${({ isFocused }) =>
     isFocused &&

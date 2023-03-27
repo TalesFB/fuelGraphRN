@@ -1,4 +1,4 @@
-import { RFValue } from "react-native-responsive-fontsize";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -36,7 +36,7 @@ export const LabelInput = styled.Text`
 export const TextInput = styled.TextInput`
   color: white;
   height: ${RFValue(50)}px;
-  /* border-radius: 4; */
+  /* border-radius: ${RFPercentage(4)}%; */
   background-color: #3d3d3d;
   display: flex;
   width: ${RFValue(320)}px;
@@ -46,7 +46,7 @@ export const TextInput = styled.TextInput`
 
 export const Button = styled.TouchableOpacity`
   height: ${RFValue(50)}px;
-  /* border-radius: 4; */
+  /* border-radius: ${RFPercentage(4)}%; */
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   justify-content: center;

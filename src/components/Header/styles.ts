@@ -28,8 +28,8 @@ export const HeaderTextWrapper = styled.View`
 export const Greeting = styled.Text`
   font-family: ${({ theme }) => theme.fonts.semi_bold};
   color: ${({ theme }) => theme.colors.whiteText};
-  font-size: 15px;
-  line-height: 22px;
+  font-size: ${RFValue(15)}px;
+  line-height: ${RFValue(22)}px;
 `;
 
 export const CarPlate = styled.Text`

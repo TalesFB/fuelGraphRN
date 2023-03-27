@@ -43,14 +43,14 @@ export const ContainerInput = styled.View`
 `;
 export const Button = styled.TouchableOpacity`
   height: ${RFValue(50)}px;
-  border-radius: 4%;
+  /* border-radius: 4%; */
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${RFValue(345)}px;
-  margin: 15px 20px;
-  padding: 10px;
+  /* width: ${RFValue(345)}px; */
+  margin: ${RFValue(15)}px ${RFValue(20)}px;
+  padding: ${RFValue(10)}px;
 `;
 
 export const TextButton = styled.Text`

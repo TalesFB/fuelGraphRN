@@ -73,7 +73,7 @@ export const CardValue = styled.Text`
 
 export const InfoConsumer = styled.Text`
   flex-direction: row;
-  margin-right: 10px;
+  margin-right: ${RFValue(10)}px;
 `;
 
 export const InfoCost = styled.Text`

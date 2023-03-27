@@ -20,7 +20,7 @@ export const EmptyContent = styled.View`
   height: 100%;
   align-items: center;
   justify-content: center;
-  opacity: 0.2;
+  opacity: 0.3;
 `;
 
 export const EmptyText = styled.Text`

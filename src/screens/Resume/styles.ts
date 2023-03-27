@@ -40,17 +40,17 @@ export const LabelItem = styled.View`
 `;
 
 export const PointerGas = styled.View`
-  height: 10px;
-  width: 10px;
+  height: ${RFValue(10)}px;
+  width: ${RFValue(10)}px;
   background-color: ${({ theme }) => theme.colors.orange};
-  border-radius: 2%;
+  /* border-radius: 2%; */
   margin-right: 10px;
 `;
 export const PointerAlcool = styled.View`
-  height: 10px;
-  width: 10px;
+  height: ${RFValue(10)}px;
+  width: ${RFValue(10)}px;
   background-color: ${({ theme }) => theme.colors.primary};
-  border-radius: 2%;
+  /* border-radius: 2%; */
   margin-right: 10px;
 `;
 
@@ -64,4 +64,19 @@ export const Percent = styled.Text`
   color: ${({ theme }) => theme.colors.whiteText};
   font-size: 10px;
   font-family: ${({ theme }) => theme.fonts.medium};
+`;
+
+export const EmptyContent = styled.View`
+  display: flex;
+  height: 100%;
+  align-items: center;
+  /* justify-content: center;s */
+  top: 30%;
+  opacity: 0.3;
+`;
+
+export const EmptyText = styled.Text`
+  font-size: ${RFValue(8)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: ${({ theme }) => theme.colors.grayText};
 `;

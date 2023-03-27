@@ -37,7 +37,7 @@ export const Container = styled.View`
   width: ${RFValue(250)};
   height: ${RFValue(140)};
   margin: 0 ${RFValue(10)}px 0 0;
-  border-radius: 5%;
+  /* border-radius: 5%; */
   margin-bottom: ${RFValue(15)}px;
 `;
 
