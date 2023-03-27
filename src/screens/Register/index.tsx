@@ -68,7 +68,7 @@ export function Register() {
                   label="Gasolina"
                   value="Gasolina"
                   labelStyle={{ color: "white" }}
-                  color={`${theme.colors.red}`}
+                  color={`${theme.colors.orange}`}
                   style={{ marginRight: 50 }}
                 />
                 <RadioButton.Item

@@ -7,7 +7,7 @@ import {
   CardInfo,
   InfoConsumer,
   InfoCost,
-  TitleBlue,
+  TitleOrange,
   TitleGreen,
   DateTitle,
   CardDescription,
@@ -20,7 +20,7 @@ import { formatReal } from "../../../lib/utils";
 
 export function VerticalCard({ item }: any) {
   const typeLabel: any = {
-    Gasolina: <TitleBlue>{item.type}</TitleBlue>,
+    Gasolina: <TitleOrange>{item.type}</TitleOrange>,
     Álcool: <TitleGreen>{item.type}</TitleGreen>,
   };
 

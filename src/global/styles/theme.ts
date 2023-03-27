@@ -5,6 +5,7 @@ export default {
     background: "#050505",
     tabBackground: "#1F1F1F",
     red: "#FF496A",
+    orange: "#FF7337",
     blue: "#2B97E6",
     grayText: "#B6B6B6",
     grayTextPlacehoder: "#7E7E7E",

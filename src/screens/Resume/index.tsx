@@ -34,7 +34,7 @@ export function Resume() {
     0
   );
   const dataChart = [
-    { type: "Gasolina", totalValue: totalGas, color: theme.colors.red },
+    { type: "Gasolina", totalValue: totalGas, color: theme.colors.orange },
     { type: "Álcool", totalValue: totalAlcool, color: theme.colors.primary },
   ];
 

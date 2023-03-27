@@ -1,9 +1,9 @@
-import { Container, CardTipe, CardInfo, InfoConsumer, InfoCost, TitleBlue, TitleGreen, TitleWhite, InfoTitle, ValueTitle } from "./styles";
+import { Container, CardTipe, CardInfo, InfoConsumer, InfoCost, TitleOrange, TitleGreen, TitleWhite, InfoTitle, ValueTitle } from "./styles";
 
 export function HorizontalCard({item}: any) {
 
   const typeLabel:any = {
-  "Gasolina": <TitleBlue>{item.type}</TitleBlue>,
+  "Gasolina": <TitleOrange>{item.type}</TitleOrange>,
   "Álcool": <TitleGreen>{item.type}</TitleGreen>,
   "Média Geral": <TitleWhite>{item.type}</TitleWhite>,
 }

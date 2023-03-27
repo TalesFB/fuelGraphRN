@@ -3,10 +3,10 @@ import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import { AntDesign } from "@expo/vector-icons";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
-export const TitleBlue = styled.Text`
+export const TitleOrange = styled.Text`
   font-size: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
-  color: ${({ theme }) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.orange};
 `;
 export const TitleGreen = styled.Text`
   font-size: ${RFValue(15)}px;

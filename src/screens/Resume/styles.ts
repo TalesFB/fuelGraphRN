@@ -42,7 +42,7 @@ export const LabelItem = styled.View`
 export const PointerGas = styled.View`
   height: 10px;
   width: 10px;
-  background-color: ${({ theme }) => theme.colors.red};
+  background-color: ${({ theme }) => theme.colors.orange};
   border-radius: 2%;
   margin-right: 10px;
 `;
