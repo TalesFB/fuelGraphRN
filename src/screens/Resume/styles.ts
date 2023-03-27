@@ -11,7 +11,7 @@ export const ResumeText = styled.Text`
   color: ${({ theme }) => theme.colors.whiteText};
   font-size: 20px;
   font-family: ${({ theme }) => theme.fonts.medium};
-  margin: 30px 0 15px 25px;
+  margin: 30px 0 15px 20px;
 `;
 export const ChartContainer = styled.View``;
 

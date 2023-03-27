@@ -1,7 +1,5 @@
 import styled from "styled-components/native";
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import { AntDesign } from "@expo/vector-icons";
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import { RFValue } from "react-native-responsive-fontsize";
 
 export const TitleOrange = styled.Text`
   font-size: ${RFValue(15)}px;
@@ -41,8 +39,8 @@ export const QuantityTitle = styled.Text`
 export const Container = styled.View`
   flex-direction: row;
   background-color: ${({ theme }) => theme.colors.cardBackground};
-  width: ${RFValue(324)};
-  height: ${RFValue(65)};
+  /* width: ${RFValue(324)}; */
+  height: ${RFValue(70)};
   margin: 0 ${RFValue(10)}px;
   margin-bottom: ${RFValue(10)}px;
 `;
@@ -51,8 +49,8 @@ export const CardTipe = styled.View`
   background-color: ${({ theme }) => theme.colors.cardBackground};
   align-items: center;
   justify-content: center;
-  height: ${RFValue(65)}px;
-  width: ${RFValue(85)}px;
+  height: ${RFValue(70)}px;
+  width: ${RFValue(90)}px;
   padding: 0 ${RFValue(8)}px;
 `;
 
@@ -74,8 +72,10 @@ export const CardValue = styled.Text`
 export const InfoConsumer = styled.Text`
   flex-direction: row;
   margin-right: ${RFValue(10)}px;
+  margin-top: ${RFValue(-5)}px;
 `;
 
 export const InfoCost = styled.Text`
   flex-direction: row;
+  margin-top: ${RFValue(-5)}px;
 `;

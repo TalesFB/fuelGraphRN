@@ -1,7 +1,5 @@
 import styled from "styled-components/native";
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import { AntDesign } from "@expo/vector-icons";
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import { RFValue } from "react-native-responsive-fontsize";
 
 export const TitleOrange = styled.Text`
   font-size: ${RFValue(15)}px;

@@ -12,7 +12,8 @@ import {
   PointerAlcool,
   Label,
   Percent,
-  EmptyContent, EmptyText 
+  EmptyContent,
+  EmptyText,
 } from "./styles";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -49,52 +50,55 @@ export function Resume() {
   return (
     <Container>
       <Header />
-      
+
       <ResumeText>Resumo por tipo de combustível</ResumeText>
-      {
-        vehicleSupplies ? (<><ChartContainer>
-        <VictoryPie
-          data={dataChart}
-          padAngle={1}
-          x="type"
-          y="totalValue"
-          colorScale={dataChart.map((item) => item.color)}
-          innerRadius={100}
-          style={{
-            labels: {
-              fill: theme.colors.whiteText,
-              fontSize: 10,
-              display: "none",
-            },
-          }}
-          animate={{
-            duration: 2000,
-            easing: "bounce",
-          }}
-        />
-      </ChartContainer>
-      <Divider />
-      <LabelCharContainer>
-        <Item>
-          <LabelItem>
-            <PointerGas></PointerGas>
-            <Label>Gasolina</Label>
-          </LabelItem>
-          <Percent>{formatPercent(percentGas,0)}</Percent>
-        </Item>
-        <Item>
-          <LabelItem>
-            <PointerAlcool></PointerAlcool>
-            <Label>Álcool</Label>
-          </LabelItem>
-          <Percent>{formatPercent(percentAlcool, 0)}</Percent>
-        </Item>
-      </LabelCharContainer></>):(<EmptyContent>
-            <MaterialCommunityIcons name="gas-station-off-outline" size={50} color="gray" />
-            <EmptyText>O resumo sobre seus abastercimentos aparecerá aqui</EmptyText>
-          </EmptyContent>)
-      }
-      
+      {vehicleSupplies ? (
+        <>
+          <ChartContainer>
+            <VictoryPie
+              data={dataChart}
+              padAngle={1}
+              x="type"
+              y="totalValue"
+              colorScale={dataChart.map((item) => item.color)}
+              innerRadius={100}
+              style={{
+                labels: {
+                  fill: theme.colors.whiteText,
+                  fontSize: 10,
+                  display: "none",
+                },
+              }}
+              animate={{
+                duration: 2000,
+                easing: "bounce",
+              }}
+            />
+          </ChartContainer>
+          <Divider />
+          <LabelCharContainer>
+            <Item>
+              <LabelItem>
+                <PointerGas></PointerGas>
+                <Label>Gasolina</Label>
+              </LabelItem>
+              <Percent>{formatPercent(percentGas, 0)}</Percent>
+            </Item>
+            <Item>
+              <LabelItem>
+                <PointerAlcool></PointerAlcool>
+                <Label>Álcool</Label>
+              </LabelItem>
+              <Percent>{formatPercent(percentAlcool, 0)}</Percent>
+            </Item>
+          </LabelCharContainer>
+        </>
+      ) : (
+        <EmptyContent>
+          <MaterialCommunityIcons name="gas-station-off-outline" size={50} color="gray" />
+          <EmptyText>O resumo sobre seus abastercimentos aparecerá aqui</EmptyText>
+        </EmptyContent>
+      )}
     </Container>
   );
 }
