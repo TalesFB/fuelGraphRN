@@ -16,7 +16,7 @@ export const KeyboardAvoidingView = styled.KeyboardAvoidingView`
 
 export const CheckContainer = styled.View`
   flex-direction: column;
-  align-items: initial;
+  /* align-items: initial; */
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background};
   margin: ${RFValue(20)}px 0 0 0;

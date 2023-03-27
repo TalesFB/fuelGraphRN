@@ -38,7 +38,7 @@ export const InputText = styled(TextInput)<Props>`
   /* border-radius: 4; */
   background-color: #3d3d3d;
   display: flex;
-  width: ${RFValue(340)}px;
+  /* width: ${RFValue(340)}px; */
   margin: ${RFValue(5)}px ${RFValue(20)}px;
   padding: ${RFValue(10)}px;
 
