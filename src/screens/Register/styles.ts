@@ -19,37 +19,36 @@ export const CheckContainer = styled.View`
   align-items: initial;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background};
-  margin: 20px 0 0 0;
+  margin: ${RFValue(20)}px 0 0 0;
 `;
 export const RadioContainer = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background};
-  margin: 5px 20px;
+  margin: ${RFValue(5)}px ${RFValue(20)}px;
 `;
 export const CheckText = styled.Text`
   color: ${({ theme }) => theme.colors.grayTextPlacehoder};
-  margin-left: 20px;
+  margin-left: ${RFValue(20)};
 `;
 export const RegisterText = styled.Text`
   color: ${({ theme }) => theme.colors.whiteText};
-  font-size: 20px;
+  font-size: ${RFValue(20)}px;
   font-family: ${({ theme }) => theme.fonts.medium};
-  margin: 30px 0 15px 20px;
+  margin: ${RFValue(30)}px 0 ${RFValue(15)}px ${RFValue(20)}px;
 `;
 export const ContainerInput = styled.View`
-  margin: 10px 0;
+  margin: ${RFValue(10)}px 0;
 `;
 export const Button = styled.TouchableOpacity`
-  height: 50;
-  border-width: 0;
-  border-radius: 4;
+  height: ${RFValue(50)}px;
+  border-radius: 4%;
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 345;
+  width: ${RFValue(345)}px;
   margin: 15px 20px;
   padding: 10px;
 `;
@@ -57,5 +56,5 @@ export const Button = styled.TouchableOpacity`
 export const TextButton = styled.Text`
   font-family: ${({ theme }) => theme.fonts.medium};
   color: #fafafa;
-  font-size: 15;
+  font-size: ${RFValue(15)}px;
 `;

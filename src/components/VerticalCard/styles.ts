@@ -44,7 +44,6 @@ export const Container = styled.View`
   width: ${RFValue(324)};
   height: ${RFValue(65)};
   margin: 0 ${RFValue(10)}px;
-  border-radius: 5%;
   margin-bottom: ${RFValue(10)}px;
 `;
 
