@@ -15,6 +15,7 @@ import {
 } from "./styles";
 import { VictoryPie } from "victory-native";
 import theme from "../../global/styles/theme";
+import { formatPercent } from "../../../lib/utils";
 
 import { AuthvehicleContext } from "../../context/AuthVehicleContext";
 
@@ -74,14 +75,14 @@ export function Resume() {
             <PointerGas></PointerGas>
             <Label>Gasolina</Label>
           </LabelItem>
-          <Percent>{percentGas}%</Percent>
+          <Percent>{formatPercent(percentGas,0)}</Percent>
         </Item>
         <Item>
           <LabelItem>
             <PointerAlcool></PointerAlcool>
             <Label>Álcool</Label>
           </LabelItem>
-          <Percent>{percentAlcool}%</Percent>
+          <Percent>{formatPercent(percentAlcool, 0)}</Percent>
         </Item>
       </LabelCharContainer>
     </Container>

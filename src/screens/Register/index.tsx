@@ -25,8 +25,8 @@ import { AuthvehicleContext } from "../../context/AuthVehicleContext";
 
 const schema = yup
   .object({
-    amountLiters: yup.number().positive().required("Informe a quantidade de litros abastecidos"),
-    litersValue: yup.number().positive().required("Informe o valor por litro de combustível"),
+    amountLiters: yup.number().positive("O número deve ser positivo").required("Informe a quantidade de litros abastecidos"),
+    litersValue: yup.number().positive("O número deve ser positivo").required("Informe o valor por litro de combustível"),
   })
   .required();
 
@@ -89,6 +89,7 @@ export function Register() {
               control={control}
               placeholder="Insira a quantidade de litros"
               error={errors.amountLiters}
+              keyboardType='numeric'
             />
           </ContainerInput>
           <ContainerInput>
@@ -98,6 +99,7 @@ export function Register() {
               control={control}
               placeholder="Insira o valor pago por litro"
               error={errors.litersValue}
+              keyboardType='numeric'
             />
           </ContainerInput>
           <Button onPress={handleSubmit(handleRegister)}>

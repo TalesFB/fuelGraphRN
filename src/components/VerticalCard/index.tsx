@@ -16,6 +16,7 @@ import {
   QuantityTitle,
   CardValue,
 } from "./styles";
+import { formatReal } from "../../../lib/utils";
 
 export function VerticalCard({ item }: any) {
   const typeLabel: any = {
@@ -38,12 +39,12 @@ export function VerticalCard({ item }: any) {
           </InfoConsumer>
           <InfoCost>
             <InfoTitle>
-              preço/L: <ValueTitle>R$ {item.litersValue}</ValueTitle>
+              preço/L: <ValueTitle>{formatReal(item.litersValue)}</ValueTitle>
             </InfoTitle>
           </InfoCost>
         </CardDescription>
         <CardValue>
-          VALOR TOTAL: <ValueTitle>R$ {item.totalValue}</ValueTitle>
+          VALOR TOTAL: <ValueTitle>{formatReal(item.totalValue)}</ValueTitle>
         </CardValue>
       </CardInfo>
     </Container>
